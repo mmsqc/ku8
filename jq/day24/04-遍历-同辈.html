@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body,div,p,span,h2,h3,html {
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	<body class="siblings">
+		<div>div (父元素)
+			<p>p</p>
+			<span>span</span>
+			<h2>h2</h2>
+			<h3>h3</h3>
+			<p>p</p>
+		</div>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		// $("h2").prev().prev().css({"border":"2px solid green"})
+		//获取上面的所有
+		// $("h2").prevAll().css({"border":"2px solid green"})
+		//知道找到p为止
+		$("h3").prevUntil("p").css({"border":"2px solid green"})
+		
+	})
+</script>

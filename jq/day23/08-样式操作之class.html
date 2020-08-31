@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.w{width:300px;}
+			.h{height:300px;}
+			.bor{border:1px solid red;}
+			.bg{background-color: #008000;}
+			.cf{color:#fff;}
+			.nw{width:500px}
+		</style>
+	</head>
+	<body>
+		<div class="w h bor bg">天王盖地虎，学好斗地主，发财又致富，</div>
+		<button>点击获取样式attr</button>
+		<button>增加样式</button>
+		<button>移除背景</button>
+		<button>切换背景</button>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button:eq(0)").click(function(){
+			let cls = $("div").attr("class");
+			console.log(cls);
+		})
+		$("button:eq(1)").click(function(){
+			$("div").addClass("cf nw")
+		})
+		$("button:eq(2)").click(function(){
+			$("div").removeClass("bg w")
+		})
+		$("button:eq(3)").click(function(){
+			$("div").toggleClass("bg")
+		})
+	})
+</script>

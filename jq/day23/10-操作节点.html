@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box{display: flex;border:2px solid #000;}
+			#box div{flex: 1;}
+			#box div img{width:100px;height:100px;}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div><img src="../../img/1.jpg" alt=""></div>
+			<div><img src="../../img/2.jpg" alt=""></div>
+		</div>
+		
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		//鼠标放上去就添加一张图片
+		let arr = ["../../img/3.jpg","../../img/4.jpg","../../img/5.jpg","../../img/mn.jpg","../../img/mn2.jpg"]
+		index = 0;
+		$("#box").click(function(){
+			if(index == arr.length){index = 0;}
+			$(this).append($('<div><img src="'+arr[index++]+'" alt=""></div>'))
+		})
+		
+		// $("img").click(function(){
+		// 	$(this).remove()
+		// })
+		
+		$("#box").on("click","img",function(){
+			$(this).remove();
+		})
+	})
+</script>

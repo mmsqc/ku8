@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+</style>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+</head>
+<body>
+	<p class="p01">窗前明月光</p>
+	<p class="p02">地上</p>
+	<p class="p03">换行</p>
+	<p class="p04">呵呵</p>
+	<p class="p05">我问问</p>
+	<span class="p04">我也是p04</span>
+</body>
+</html>
+<script>
+	$(function(){
+		$("p").filter(".p04").css({"background":"pink"})
+	})
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* img{width:300px;} */
+		</style>
+	</head>
+	<body>
+		<button type="button">得到输入框的内容</button>
+		<button type="button">设置输入框的内容</button>
+		<button type="button">获取图片的属性</button>
+		<button type="button">设置图片的属性</button>
+		<button type="button">移除图片的属性</button>
+		<input name="uname"/>
+		<p></p>
+		<img id="img01" class="imgmm" width="300" src="../../img/mn.jpg" />
+		
+		
+		
+		
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button:eq(0)").click(function(){
+			let val = $("input").val();
+			console.log(val);
+		})
+		$("button:eq(1)").click(function(){
+			$("input").val("我是萧山，乔峰是我儿");
+		})
+		$("button:eq(2)").click(function(){
+			let attr = $("img").attr("class");
+			console.log(attr);
+		})
+		$("button:eq(3)").click(function(){
+			$("img").attr("src","../../img/mn2.jpg");
+		})
+		$("button:eq(4)").click(function(){
+			$("img").removeAttr("width");
+		})
+	})
+</script>

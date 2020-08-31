@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button">淡出</button>
+		<button type="button">淡入</button>
+		<button type="button">淡入/淡出</button>
+		<button type="button">fadeTo</button>
+		<p></p>
+		<img src="../../img/mn.jpg" width="1380" height="600" alt="">
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			//淡出
+			$("img").fadeOut(3000,"linear",function(){
+				
+			})
+		})
+		$("button").eq(1).click(function(){
+			//淡入
+			$("img").fadeIn(3000,"linear",function(){
+				
+			})
+		})
+		$("button").eq(2).click(function(){
+			//淡入
+			$("img").fadeToggle(3000,"linear",function(){
+				
+			})
+		})
+		$("button").eq(3).click(function(){
+			//淡入
+			$("img").fadeTo(3000,0.3,"linear",function(){
+				
+			})
+		})
+	})
+</script>

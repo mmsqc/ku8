@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button">点我啊</button>
+		<button type="button">看不上</button>
+		<button type="button">解绑第一个按钮的点击事件</button>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button:first")
+		.click(function(){
+			alert("大胆，敢点我！")
+		})
+		.mouseover(function(){
+			//javascript  才有this这个对象
+			//但是  css这个函数是jquery里面提供的
+			//我们没有办法使用js的对象调用jquery的方法
+			//但是，我们可以将js的对象包装成jquery的对象，然后就可以调用它的方法 jq = $(js);
+			// this.style.color="red";
+			// $(this).css("color","red");  //错误的写法
+			//那么如果是jq对象非得使用js的方法呢     js = jq[i];
+			$(this)[0].style.color="blue";
+		})
+		
+		$("button:eq(1)").bind("click",function(){
+			alert("啊，看不上")
+		})
+		.bind("mouseout",function(){
+			this.style.color="yellow";
+		})
+		
+		$("button:eq(2)").click(function(){
+			//解绑第一个按钮的点击事件
+			$("button:eq(0)").unbind("click");
+		})
+		
+	})
+</script>

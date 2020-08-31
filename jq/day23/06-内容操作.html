@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{width:300px;height:500px;border:1px  solid red;}
+		</style>
+	</head>
+	<body>
+		<button>点我获取div的内容</button>
+		<button>点我设置div的内容</button>
+		<button>text获取内容</button>
+		<button>text设置内容</button>
+		
+		<div>我是div，万能的div，啊，真万能！不牛逼<span>我是span，呵呵</span></div>
+		<div>我是div，万能的div，啊，真万能！牛逼</div>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button:first").click(function(){
+			// let it = $("div")[0].innerHTML;
+			let it = $("div").html();
+			console.log(it);
+		})
+		
+	})
+	$(function(){
+		$("button:eq(1)").click(function(){
+			$("div").html("<button>我是小div，不要看我下，我其实很好！</button>");
+		})
+		
+	})
+	$(function(){
+		$("button:eq(2)").click(function(){
+			let xt = $("div").text();
+			console.log(xt);
+		})
+		
+	})
+	$(function(){
+		$("button:eq(3)").click(function(){
+			$("div").text("<button>今儿个天儿不错，肚子不觉饿，啊，不觉饿</button>");
+			
+		})
+	})
+</script>
+
+
+
+

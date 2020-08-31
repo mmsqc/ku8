@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button">下滑</button>
+		<button type="button">上滑</button>
+		<button type="button">上下滑</button>
+		<p></p>
+		<img src="../../img/mn.jpg" width="1380" height="600" alt="">
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			//淡出
+			$("img").slideDown(3000,"linear",function(){
+				
+			})
+		})
+		$("button").eq(1).click(function(){
+			//淡入
+			$("img").slideUp(3000,"linear",function(){
+				
+			})
+		})
+		$("button").eq(2).click(function(){
+			//淡入
+			$("img").slideToggle(300,"linear",function(){
+				
+			})
+		})
+		
+	})
+</script>

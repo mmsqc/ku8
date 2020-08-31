@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:300px;height:300px;
+				border:50px solid pink;
+				padding:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		//拿到所有的标签，改成红色
+		let div = $("div");
+		console.log("width",div.width());
+		console.log("width",div.innerWidth());
+		console.log("width",div.outerWidth());
+	})
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div>天王盖地虎，学好斗地主，发财又致富，</div>
+		<button>点我增加背景</button>
+		<button>点我增加颜色，以及边框</button>
+		<button>获取样式</button>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		$("button:eq(0)").click(function(){
+			$("div").css("background","teal")
+		})
+		$("button:eq(1)").click(function(){
+			$("div").css({"color":"#fff","border":"2px solid pink"})
+		})
+		$("button:eq(2)").click(function(){
+			let cs = $("div").css("color")
+			console.log(cs);
+		})
+	})
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button>哎呀</button>
+		<a href="">来啊</a>
+		<p>p01<a href="#" class="xx">我是p里面的a，啊嘿</a></p>
+		<p class="p02s" style="display: none;">p02s</p>
+		<p class="px0 p7">p03</p>
+		<p id="p1" class="p02s">p04啊嘿</p>
+		<p >p05<a href="">aaa</a></p>
+		<span>我是span</span>
+		<button>哎呀</button>
+		<table border="1" cellspacing="0" cellpadding="0">
+			<tr><th>Header</th><th>Header</th></tr>
+			<tr><td>Data</td><td>Data</td></tr>
+		</table>
+		
+		<input type="file" name="" id="" value="" />
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		//拿到所有的标签，改成红色
+		// $("p:not(:first):not(:last):last").css({"background-color":"red","color":"#fff","font-size":"30px"})
+		$("p:visible").css({"background-color":"red","color":"#fff","font-size":"30px"})
+		$("p:hidden").css({"background-color":"yellow","color":"#fff","font-size":"30px"})
+		$("p:contains('啊嘿')").css({"color":"green"})
+		$("p:has(a)").css({"color":"deeppink"})
+		$("table tr td:last").css({"border":"2px solid red"})
+	})
+</script>

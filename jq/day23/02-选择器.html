@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button>哎呀</button>
+		<a href="">来啊</a>
+		<p>p01<a href="#">我是p里面的a，啊嘿</a></p>
+		<p class="p0">p02</p>
+		<p class="p0">p03</p>
+		<p id="p1">p04</p>
+		<p >p05</p>
+		<span>我是span</span>
+		<button>哎呀</button>
+	</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script>
+	$(function(){
+		//拿到所有的标签，改成红色
+		$("p:gt(0):even:last").css({"background-color":"red","color":"#fff","font-size":"30px"})
+	})
+</script>
